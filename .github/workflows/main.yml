@@ -50,14 +50,14 @@ jobs:
         set -e -o pipefail
         ./cruelbuild config                    \
                      model=${{ matrix.model }} \
-                     name="CRUEL-3.10_DrunknPilot"         \
+                     name="CRUEL-3.10_SELinux_DrunknPilot"         \
                      toolchain=$TOOLCHAIN      \
                      +magisk                   \
                      +nohardening              \
                      +ttl                      \
                      +wireguard                \
                      +cifs                     \
-                     +sdfat                    \
+                     -sdfat                    \
                      +ntfs                     \
                      +morosound                \
                      +boeffla_wl_blocker       \
